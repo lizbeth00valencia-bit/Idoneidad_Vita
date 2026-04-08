@@ -165,8 +165,44 @@
             </thead>
             <tbody id="tabla-criterios">
                 <script>
-                    const items = ["1. Agendamiento", "2. Canales contacto", "3. Claridad costo", "4. Información previa", "5. Tiempo espera", "6. Horario", "7. Registro ágil", "8. Personal administrativo", "9. Amabilidad", "10. Escuchado", "11. Conocimientos", "12. Confianza", "13. Explicación clara", "14. Dudas resueltas", "15. Necesidad respondida", "16. Conforme resultado", "17. Instalaciones", "18. Limpieza", "19. Satisfacción general", "20. Idoneidad", "21. Volvería", "22. Recomendaría"];
+                    const items = [
+                        "1. Pude agendar mi cita de manera fácil y rápida.",
+                        "2. Los canales de contacto (teléfono, WhatsApp o presencial) fueron adecuados.",
+                        "3. La información sobre el costo del servicio fue clara.",
+                        "4. La información brindado antes de la atención fue suficiente y comprensible.",
+                        "5. El tiempo de espera para recibir atención fue adecuado.",
+                        "6. La atención se realizó dentro del horario programado.",
+                        "7. El proceso de registro y admisión fue agil.",
+                        "8. El personal administrativo resolvió mis inquietudes de manera eficiente.",
+                        "9. El personal me atendió con amabilidad y respeto.",
+                        "10. Me senti escuchado(a) y bien tratado(a) durante la atención.",
+                        "11. El personal asistencial demostró conocimientos y experiencia.",
+                        "12. Senti confianza en la atención recibida.",
+                        "13. El procedimiento o tratamiento fue explicado de forma clara.",
+                        "14. Pude resolver mis dudas durante la atención.",
+                        "15. El servicio recibido respondió a mi necesidad.",
+                        "16. Quedé conforme con el resultado de la atención.",
+                        "17. Las instalaciones fueron cómodas y adecuadas.",
+                        "18. El ambiente de atención fue limpia y organizado.",
+                        "19. En general, la experiencia con el servicio fue satisfactoria.",
+                        "20. Considero que el servicio prestado fue idóneo.",
+                        "21. Volvería a utilizar este servicio en el futuro.",
+                        "22. Recomendaría este servicio a familiares o conocidos."
+                    ];
                     items.forEach((text, i) => {
+                        document.write(`
+                            <tr>
+                                <td class="text-left">${text}</td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="1" required></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="2"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="3"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="4"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="5"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="na"></td>
+                            </tr>
+                        `);
+                    });
+                 => {
                         document.write(`<tr><td class="text-left">${text}</td>` + [1,2,3,4,5,'na'].map(v => `<td class="radio-cell"><input type="radio" name="item${i}" value="${v}" required></td>`).join('') + `</tr>`);
                     });
                 </script>
