@@ -5,24 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instrumento de Evaluación de Idoneidad y Satisfacción</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f5fa; color: #1a3a5a; margin: 0; padding: 20px; }
-        .container { max-width: 950px; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: auto; border-top: 10px solid #0056b3; }
+        /* Ajustes base para móviles */
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f5fa; color: #1a3a5a; margin: 0; padding: 10px; }
+        
+        /* Contenedor responsivo */
+        .container { 
+            width: 95%; 
+            max-width: 950px; 
+            background: #ffffff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+            margin: auto; 
+            border-top: 10px solid #0056b3; 
+        }
+
         .header-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
         .header-table td { border: 1px solid black; padding: 10px; text-align: center; font-weight: bold; color: #003366; vertical-align: middle; }
+        
         .section-box { background-color: #f9fbff; border: 1px solid #d1e3f8; padding: 20px; margin-bottom: 20px; border-radius: 4px; line-height: 1.5; font-size: 13px; text-align: justify; }
+        
         h4 { color: #004085; border-bottom: 2px solid #007bff; padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 15px; }
+        
         .input-group { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         label { font-weight: bold; }
         input[type="text"], input[type="email"] { border: none; border-bottom: 1px solid #0056b3; padding: 5px; background: transparent; flex-grow: 1; outline: none; }
-        .grid-services { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; background: #f0f7ff; padding: 20px; border-radius: 4px; border: 1px solid #d1e3f8; }
+
+        /* Servicios adaptable: Se apilan solos en celular */
+        .grid-services { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            background: #f0f7ff; 
+            padding: 20px; 
+            border-radius: 4px; 
+            border: 1px solid #d1e3f8; 
+        }
+        
         .service-column p { margin-top: 0; font-weight: bold; color: #0056b3; text-decoration: underline; }
         .service-item { margin-bottom: 6px; display: flex; align-items: flex-start; font-size: 12px; }
         .service-item input { margin-right: 10px; cursor: pointer; margin-top: 2px; }
-        .eval-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 12px; }
+
+        /* Ajuste para que la tabla sea deslizable en el celular */
+        .eval-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 12px; min-width: 600px; }
         .eval-table th { background-color: #0056b3; color: #ffffff; padding: 12px; border: 1px solid #004494; }
         .eval-table td { border: 1px solid #d1e3f8; padding: 8px; text-align: center; }
         .text-left { text-align: left !important; padding-left: 15px !important; font-weight: 500; width: 40%; }
+        
         .btn-submit { background-color: #0056b3; color: white; padding: 18px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%; font-size: 18px; margin-top: 30px; }
+
+        /* Media query para asegurar que el encabezado no se rompa en pantallas muy pequeñas */
+        @media (max-width: 600px) {
+            .header-table { font-size: 10px; }
+            .header-table td { padding: 5px; }
+            .container { padding: 15px; }
+        }
     </style>
 </head>
 <body>
@@ -107,16 +144,22 @@
                 <div class="service-item"><input type="checkbox" name="servicio" value="Neurocirugía"> Neurocirugía</div>
             </div>
         </div>
-
-        <h4>EVALUACIÓN DE LA CALIDAD DEL SERVICIO (SU EXPERIENCIA CON NOSOTROS)</h4>
-        <table class="eval-table">
-            <thead>
-                <tr>
-                    <th class="text-left">Criterios de Evaluación</th>
-                    <th>Muy malo</th><th>Malo</th><th>Regular</th><th>Buena</th><th>Excelente</th><th>N/A</th>
-                </tr>
-            </thead>
-            <tbody id="tabla-criterios">
+       <h4>EVALUACIÓN DE LA CALIDAD DEL SERVICIO (SU EXPERIENCIA CON NOSOTROS)</h4>
+<div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+    <table class="eval-table">
+        <thead>
+            <tr>
+                <th class="text-left">Criterios de Evaluación</th>
+                <th>Muy malo</th><th>Malo</th><th>Regular</th><th>Buena</th><th>Excelente</th><th>N/A</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-criterios">
+            <script>
+                // ... aquí va tu script de las preguntas que ya tienes ...
+            </script>
+        </tbody>
+    </table>
+</div>
                 <script>
                     const full_items = [
                         "1. Pude agendar mi cita de manera fácil y rápida.", 						
