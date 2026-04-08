@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumento de Evaluación de Idoneidad y Satisfacción</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f5fa; color: #1a3a5a; margin: 0; padding: 20px; }
+        .container { max-width: 950px; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: auto; border-top: 10px solid #0056b3; }
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v25.0"></script>
+
+<div class="container">
+        
+        /* Encabezado */
+        .header-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .header-table td { border: 1px solid black; padding: 10px; text-align: center; font-weight: bold; color: #003366; vertical-align: middle; }
+        
+        /* Secciones de texto */
+        .section-box { background-color: #f9fbff; border: 1px solid #d1e3f8; padding: 20px; margin-bottom: 20px; border-radius: 4px; line-height: 1.5; font-size: 13px; text-align: justify; }
+        h4 { color: #004085; border-bottom: 2px solid #007bff; padding-bottom: 5px; margin-top: 30px; text-transform: uppercase; font-size: 15px; }
+        
+        /* Campos de entrada */
+        .input-group { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        label { font-weight: bold; }
+        input[type="text"], input[type="email"] { border: none; border-bottom: 1px solid #0056b3; padding: 5px; background: transparent; flex-grow: 1; outline: none; }
+        
+        /* Servicios - Grid */
+        .grid-services { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; background: #f0f7ff; padding: 20px; border-radius: 4px; border: 1px solid #d1e3f8; }
+        .service-column p { margin-top: 0; font-weight: bold; color: #0056b3; text-decoration: underline; }
+        .service-item { margin-bottom: 6px; display: flex; align-items: flex-start; font-size: 12px; }
+        .service-item input { margin-right: 10px; cursor: pointer; margin-top: 2px; }
+
+        /* Tabla de Evaluación */
+        .eval-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 12px; }
+        .eval-table th { background-color: #0056b3; color: #ffffff; padding: 12px; border: 1px solid #004494; }
+        .eval-table td { border: 1px solid #d1e3f8; padding: 8px; text-align: center; }
+        .text-left { text-align: left !important; padding-left: 15px !important; font-weight: 500; width: 40%; }
+        
+        .radio-cell:hover { background-color: #e6f0ff; cursor: pointer; }
+        
+        .btn-submit { background-color: #0056b3; color: white; padding: 18px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%; font-size: 18px; margin-top: 30px; transition: 0.3s; }
+        .btn-submit:hover { background-color: #003366; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form id="encuestaForm">
+        <table class="header-table" style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td rowspan="3" style="width: 20%; background-color: #0056b3; padding: 10px; border: 1px solid black; text-align: center;">
+                    <img src="https://clinicavita.com.co/img/logo1.png" alt="Logo Clínica Vita" style="max-width: 100%; height: auto;">
+                </td>
+                <td rowspan="3" style="width: 50%; background-color: #eef6ff; font-size: 14px; border: 1px solid black; text-align: center; font-weight: bold; padding: 10px;">
+                    INSTRUMENTO DE EVALUACIÓN DE IDONEIDAD Y SATISFACCIÓN EN LA PRESTACIÓN DE SERVICIOS DE SALUD PRESTADOS
+                </td>
+                <td style="width: 15%; background-color: #f2f2f2; border: 1px solid black; padding: 5px; font-weight: bold;">CÓDIGO:</td>
+                <td style="width: 15%; border: 1px solid black; padding: 5px;">FOR-TH-009</td>
+            </tr>
+            <tr>
+                <td style="background-color: #f2f2f2; border: 1px solid black; padding: 5px; font-weight: bold;">VERSIÓN:</td>
+                <td style="border: 1px solid black; padding: 5px;">01</td>
+            </tr>
+            <tr>
+                <td style="background-color: #f2f2f2; border: 1px solid black; padding: 5px; font-weight: bold;">VIGENTE DESDE:</td>
+                <td style="border: 1px solid black; padding: 5px;">24/02/2021</td>
+            </tr>
+        </table>
+
+        <div class="section-box">
+            <strong>Objetivo:</strong> Evaluar la experiericia del usuario y la idoneidad de los servicios ofrecidos por la Clínica de Fracturas Vita S.A.S., con el fin de identificar oportunidades de mejora en la atención, fortalecer la satisfacción del paciente y generar insumos para las estrategias de mercadeo y comunicación institucional.
+            <br><br>
+            A continuación encontrará una serie de preguntas relacionadas con su experiencia en la Clínica de Fracturas Vita. Sus respuestas nos permitirán mejorar la atención, fortalecer nuestros procesos de comunicación y optimizar nuestras estrategias de servicio y mercadeo.
+            <br><br>
+            Por favor, responda con total sinceridad. La información suministrada será tratada de manera confidencial y utilizada exclusivamente con fines de evaluación, mejora de la calidad y mercadeo institucional. Al diligenciar y enviar este formulario, usted manifiesta su aceptación de la Política de Protección de Datos Persoriales de la Clínica de Fracturas Vita S.A.S., en cumplimiento de la normatividad vigente.
+        </div>
+
+        <div class="input-group">
+            <label>Nombre completo del encuestado:</label>
+            <input type="text" name="nombre" required>
+        </div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="input-group" style="flex: 1;">
+                <label>Número de Celular:</label>
+                <input type="text" name="celular">
+            </div>
+            <div class="input-group" style="flex: 1;">
+                <label>Número de WhatsApp:</label>
+                <input type="text" name="whatsapp">
+            </div>
+        </div>
+        <div class="input-group">
+            <label>Desea recibir comunicaciones Institucionales via WhatsApp:</label>
+            <label style="font-weight: normal;"><input type="radio" name="com_wa" value="si"> Si</label>
+            <label style="font-weight: normal;"><input type="radio" name="com_wa" value="no"> No</label>
+        </div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="input-group" style="flex: 1;">
+                <label>Fecha (dd-mm-aaaa):</label>
+                <input type="text" name="fecha">
+            </div>
+            <div class="input-group" style="flex: 1;">
+                <label>Hora de diligenciamiento (am/pm):</label>
+                <input type="text" name="hora">
+            </div>
+        </div>
+        <div class="input-group">
+            <label>Correo Electronico:</label>
+            <input type="email" name="email">
+        </div>
+
+        <p style="font-style: italic; font-size: 13px; color: #555; margin-top: 20px;">
+            Instrucciones: A continuación encontrará una serie de preguntas sobre to experiencia en la Clínica de Fracturas Vita. Por favor, responda con sinceridad, ya que los comentarios son muy importantes para nosotros.
+        </p>
+
+        <h4>Identificación del área y servicio de atención en salud</h4>
+        <p style="font-size: 13px;">¿Qué servicio utilizaste en la clinica? (Puedes seleccionar más de una opción)</p>
+        
+        <div class="grid-services">
+            <div class="service-column">
+                <p>1. Atención inmediata</p>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Urgencias"> Urgencias</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Transporte Básico"> Transporte asistencial básico</div>
+                
+                <p>2. Internación</p>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Hospitalización"> Hospitalización</div>
+                
+                <p>3. Apoyo diagnostico y Complementación terapeútica</p>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Laboratorio clínico"> Laboratorio clínico</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Toma de muestras"> Toma de muestras de laboratorio clínico</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Servicio farmacéutico"> Servicio farmacéutico</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Fisioterapia"> Fisioterapia</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Rayos X"> Imágenes diagnósticas ionizantes (Rayos X, Tomografias)</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Ecografías"> Imágenes diagnósticas no ionizantes (Ecografías. Resonancias)</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Gestión pre transfusional"> Gestión pre transfusional</div>
+            </div>
+            <div class="service-column">
+                <p>4. Grupo consulta Externa</p>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Anestesiologia"> Anestesiologia</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Cardiologia"> Cardiologia</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Medicina general"> Medicina general</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Medicina intema"> Medicina intema</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Nutrición y dietética"> Nutrición y dietética</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Ortopedia y/o traumatologia"> Ortopedia y/o traumatologia</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Otorrinolaringologia"> Otorrinolaringologia</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Psicología"> Psicología</div>
+                
+                <p>5. Grupo Quirurgico</p>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Cirugia general"> Cirugia general</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Cirugia ginecológica"> Cirugia ginecológica</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Cirugía maxilofacial"> Cirugía maxilofacial</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Cirugia ortopédica"> Cirugia ortopédica</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Cirugia atorrinolaringologia"> Cirugia atorrinolaringologia</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Cirugia plástica y estética"> Cirugia plástica y estética</div>
+                <div class="service-item"><input type="checkbox" name="servicio" value="Neurocirugía"> Neurocirugía</div>
+            </div>
+        </div>
+
+        <h4>Evaluación de la Calidad del Servicio (Su experiencia con nosotros)</h4>
+        <p style="font-size: 13px;">Lea cuidadasamente los siguientes criterios de evaluación y seleccione la opción que mejor represente su experiencia:</p>
+
+        <table class="eval-table">
+            <thead>
+                <tr>
+                    <th class="text-left">Criterios de Evaluación de la Experiencia del Usuario</th>
+                    <th>Muy malo</th>
+                    <th>Malo</th>
+                    <th>Regular</th>
+                    <th>Buena</th>
+                    <th>Excelente</th>
+                    <th>No Aplica</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-criterios">
+                <script>
+                    const items = [
+                        "1. Pude agendar mi cita de manera fácil y rápida.",
+                        "2. Los canales de contacto (teléfono, WhatsApp o presencial) fueron adecuados.",
+                        "3. La información sobre el costo del servicio fue clara.",
+                        "4. La información brindado antes de la atención fue suficiente y comprensible.",
+                        "5. El tiempo de espera para recibir atención fue adecuado.",
+                        "6. La atención se realizó dentro del horario programado.",
+                        "7. El proceso de registro y admisión fue agil.",
+                        "8. El personal administrativo resolvió mis inquietudes de manera eficiente.",
+                        "9. El personal me atendió con amabilidad y respeto.",
+                        "10. Me senti escuchado(a) y bien tratado(a) durante la atención.",
+                        "11. El personal asistencial demostró conocimientos y experiencia.",
+                        "12. Senti confianza en la atención recibida.",
+                        "13. El procedimiento o tratamiento fue explicado de forma clara.",
+                        "14. Pude resolver mis dudas durante la atención.",
+                        "15. El servicio recibido respondió a mi necesidad.",
+                        "16. Quedé conforme con el resultado de la atención.",
+                        "17. Las instalaciones fueron cómodas y adecuadas.",
+                        "18. El ambiente de atención fue limpia y organizado.",
+                        "19. En general, la experiencia con el servicio fue satisfactoria.",
+                        "20. Considero que el servicio prestado fue idóneo.",
+                        "21. Volvería a utilizar este servicio en el futuro.",
+                        "22. Recomendaría este servicio a familiares o conocidos."
+                    ];
+
+                    items.forEach((text, i) => {
+                        document.write(`
+                            <tr>
+                                <td class="text-left">${text}</td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="1" required></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="2"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="3"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="4"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="5"></td>
+                                <td class="radio-cell"><input type="radio" name="item${i}" value="na"></td>
+                            </tr>
+                        `);
+                    });
+                </script>
+            </tbody>
+        </table>
+
+        <div class="section-box" style="margin-top: 30px; border-left: 5px solid #0056b3;">
+            Agradecemos sinceramente el tiempo y la colaboración brindados. Su opinión es fundamental para seguir mejorando nuestros servicios y fortalecer la calidad de la atención que ofrecemos.
+            <br><br>
+            Recuerde que su experiencia y percepción son de vital importancia para nosotros y contribuyen directamente a la mejora continua de nuestros procesos en beneficio de todos nuestros usuarios.
+        </div>
+
+<div class="section-box" style="text-align: center; background-color: #f0f2f5;">
+    <h4 style="border: none; margin-top: 0;">¡Síguenos en Facebook!</h4>
+    <p style="font-size: 13px; margin-bottom: 15px;">Mantente informado sobre nuestros servicios  y especialidades.</p>
+    
+    <div style="display: flex; justify-content: center;">
+        <div class="fb-page" 
+             data-href="https://www.facebook.com/profile.php?id=100083375820502" 
+             data-tabs="timeline" 
+             data-width="400" 
+             data-height="300" 
+             data-small-header="false" 
+             data-adapt-container-width="true" 
+             data-hide-cover="false" 
+             data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/profile.php?id=100083375820502" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/profile.php?id=100083375820502">Clínica Vita La Dorada</a>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+        <button type="submit" class="btn-submit" id="btnEnviar">ENVIAR</button>
+    </form>
+
+    <div style="text-align: right; font-size: 10px; color: #999; margin-top: 10px;">Página 1 de 1</div>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbypRpVUEE1ARShnW467Y7lMI1KO7Ycy0bdOYihCvvLBB1pyr781b5nGNGL2nJb0AKMXDw/exec';
+    const form = document.getElementById('encuestaForm');
+    const btnEnviar = document.getElementById('btnEnviar');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        btnEnviar.disabled = true;
+        btnEnviar.innerText = "Enviando...";
+
+        const formData = new FormData(form);
+
+        // Agregamos cada checkbox marcado individualmente al FormData
+        document.querySelectorAll('input[name="servicio"]:checked').forEach(cb => {
+            formData.append(cb.value, "true"); 
+        });
+
+        fetch(scriptURL, { method: 'POST', body: formData})
+            .then(response => {
+                alert('¡Encuesta enviada con éxito!');
+                btnEnviar.disabled = false;
+                btnEnviar.innerText = "ENVIAR";
+                form.reset();
+            })
+            .catch(error => {
+                alert('Hubo un error al enviar.');
+                btnEnviar.disabled = false;
+                btnEnviar.innerText = "ENVIAR";
+            });
+    });
+</script>
+
+</body>
+</html>
