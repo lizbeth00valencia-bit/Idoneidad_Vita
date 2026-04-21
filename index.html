@@ -167,17 +167,19 @@
                         "9. El personal me atendió con amabilidad y respeto.",
                         "10. Me senti escuchado(a) y bien tratado(a) durante la atención.",
                         "11. El personal asistencial demostró conocimientos y experiencia.",
-                        "12. Senti confianza en la atención recibida.",
-                        "13. El procedimiento o tratamiento fue explicado de forma clara.",
-                        "14. Pude resolver mis dudas durante la atención.",
-                        "15. El servicio respondió a mi necesidad.",
-                        "16. Quedé conforme con el resultado de la atención.",
-                        "17. Las instalaciones fueron cómodas y adecuadas.",
-                        "18. El ambiente de atención fue limpia y organizado.",
-                        "19. En general, la experiencia con el servicio fue satisfactoria.",
-                        "20. Considero que el servicio prestado fue idóneo.",
-                        "21. Volvería a utilizar este servicio en el futuro.",
-                        "22. Recomendaría este servicio a familiares o conocidos."
+                        "12. Durante la atención se respetó mi privacidad.,
+                        "13. Senti confianza en la atención recibida.",
+                        "14. El procedimiento o tratamiento fue explicado de forma clara.",
+                        "15. Pude resolver mis dudas durante la atención.",
+                        "16. El servicio respondió a mi necesidad.",
+                        "17. Quedé conforme con el resultado de la atención.",
+                        "18. Las instalaciones fueron cómodas y adecuadas.",
+                        "19. El ambiente de atención fue limpia y organizado.",
+                        "20. En general, la experiencia con el servicio fue satisfactoria.",
+                        "21. Considera que recibió exactamente el servicio que se le ofreció.",
+                        "22. Volvería a utilizar este servicio en el futuro.",
+                        "23. Recomendaría este servicio a familiares o conocidos.",
+            
                     ];
                     full_items.forEach((text, i) => {
                         document.write(`<tr><td class="text-left">${text}</td>` + [1,2,3,4,5,'na'].map(v => `<td><input type="radio" name="item${i}" value="${v}" required></td>`).join('') + `</tr>`);
