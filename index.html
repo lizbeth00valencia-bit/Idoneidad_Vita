@@ -179,6 +179,7 @@
                         "21. Considera que recibió exactamente el servicio que se le ofreció.",
                         "22. Volvería a utilizar este servicio en el futuro.",
                         "23. Recomendaría este servicio a familiares o conocidos."
+                    
                         ];
                     full_items.forEach((text, i) => {
                         document.write(`<tr><td class="text-left">${text}</td>` + [1,2,3,4,5,'na'].map(v => `<td><input type="radio" name="item${i}" value="${v}" required></td>`).join('') + `</tr>`);
