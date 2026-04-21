@@ -187,7 +187,7 @@
                     
                         ];
                     full_items.forEach((text, i) => {
-                        document.write(`<tr><td class="text-left">${text}</td>` + [1,2,3,4,5,'na'].map(v => `<td><input type="radio" name="item${i}" value="${v}" required></td>`).join('') + `</tr>`);
+    document.write(`<tr><td class="text-left">${text}</td>` + ['na', 1, 2, 3, 4, 5].map(v => `<td><input type="radio" name="item${i}" value="${v}" required></td>`).join('') + `</tr>`);
                     });
                 </script>
             </tbody>
@@ -211,7 +211,7 @@
       </div>
 
    <script>
-    const scriptURL ='https://script.google.com/macros/s/AKfycbykK3scMcdd81gjGWMDL_9kUHR-FuyNv9VVljIRBRjAxEPE_KKEHx4eScGWluudQG8I8g/exec';
+    const scriptURL ='https://script.google.com/macros/s/AKfycbxnXZ9wxpbGcrBjNsqAjU6s1bPzZgl-zzMu2wGvPH-d0bh4KZBVQlutPN6GFIOEthRNdw/exec';
     const form = document.getElementById('encuestaForm');
     form.addEventListener('submit', e => {
         e.preventDefault();
